@@ -1,0 +1,16 @@
+- name: output_score_action
+  size: medium
+  columns: ['USER_ID', 'IS_FRAUDSTER','model_score','ventiles','action']
+  schema: |
+    USER_ID uuid primary key,
+    IS_FRAUDSTER integer,
+    model_score float(8),
+    ventiles integer,
+    action varchar(30)
+    
+- name: feature_information
+  size: small
+  columns: ['importance_score','feature']
+  schema: |
+    importance_score float(8),
+    feature varchar(100)
